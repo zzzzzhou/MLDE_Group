@@ -9,3 +9,11 @@ Maybe in 2017 and 2018, platform had improved alot with its operation. So we dro
 Given that the data is imbalanced, we try over sampling to imrpove prediction precision. In notebook #construct train and test data by Piggy BMW# you can find RandomOverSampler method. And it indeed improve precision from 80% to 82%
 
 Conclusion
+Before over sampling, the model precision around 80%![image](https://user-images.githubusercontent.com/19428196/151781433-fc46d087-8c42-4bdf-855e-47ddffeb82ae.png)
+
+after over sampling, the model precision around 82%![image](https://user-images.githubusercontent.com/19428196/151781632-b0fd0092-853d-4f04-b91a-493e741239cb.png)
+
+If compare to stupid model(predict every order as positive), stupid model has precision of 0.766652962810698. Our model is around sometimes go to 0.82. So our model can improve the business. 
+
+Future work
+we can train two classifier in first level, one trained by 1-3 VS 4 star review, one trained by 1-3 VS 5 star review. On the second level, we can build a classifier as voting machine, to combined the outcome from level 1 two classifiers. Because the data is imbalanced, 1-3 review nearly equal to 4 star review. And can do over sampling with 1-3 VS 5 star review. In this way data imbalance can be fix a lot. And level one 2 classifier can produce a much better performance.
