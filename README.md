@@ -15,5 +15,5 @@ after over sampling, the model precision around 82%![image](https://user-images.
 
 If compare to stupid model(predict every order as positive), stupid model has precision of 0.766652962810698. Our model is around sometimes go to 0.82. So our model can improve the business. 
 
-Future work
-we can train two classifier in first level, one trained by 1-3 VS 4 star review, one trained by 1-3 VS 5 star review. On the second level, we can build a classifier as voting machine, to combined the outcome from level 1 two classifiers. Because the data is imbalanced, 1-3 review nearly equal to 4 star review. And can do over sampling with 1-3 VS 5 star review. In this way data imbalance can be fix a lot. And level one 2 classifier can produce a much better performance.
+Future work:
+we can train two classifier in first level, one trained by 1-3 VS 4 star review, one trained by 1-3 VS 5 star review. On the second level, we can build a classifier as voting machine, to combined the outcome from level 1 two classifiers. Because the data is imbalanced, 1-3 review nearly equal to 4 star review. And can do over sampling with 1-3 VS 5 star review. In this way data imbalance can be fix a lot. And level one 2 classifier can produce a much better performance. In second level it doesn't matter if you misclassify a 4* as a 5* or vice versa, and then essentially you only care about when the classifier wrongly predicts in association with class 1-3(Michael,2022)
