@@ -17,3 +17,4 @@ If compare to stupid model(predict every order as positive), stupid model has pr
 
 Future work:
 we can train two classifier in first level, one trained by 1-3 VS 4 star review, one trained by 1-3 VS 5 star review. On the second level, we can build a classifier as voting machine, to combined the outcome from level 1 two classifiers. Because the data is imbalanced, 1-3 review nearly equal to 4 star review. And can do over sampling with 1-3 VS 5 star review. In this way data imbalance can be fix a lot. And level one 2 classifier can produce a much better performance. In second level it doesn't matter if you misclassify a 4* as a 5* or vice versa, and then essentially you only care about when the classifier wrongly predicts in association with class 1-3(Michael,2022)
+![review decistion_tree](https://user-images.githubusercontent.com/19428196/156170368-8883af3d-6d51-41ba-8209-696406a7f3a7.png)
